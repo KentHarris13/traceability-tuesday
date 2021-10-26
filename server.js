@@ -19,6 +19,15 @@ app.get('/style', (req,res) => {
     res.sendFile(path.join(__dirname,'/public/styles.css'))
 })
 
+app.get('/rollbar', (req,res) => {
+    try {
+        nonExistentFunction();
+      } catch (error) {
+        rollbar.error("plz be broken");
+      }
+      
+})
+
 app.use(rollbar.errorHandler())
 const port = process.env.PORT || 4545
 
