@@ -44,8 +44,8 @@ app.post('/api/drink', (req, res) => {
         rollbar.error('No drink given')
         res.status(400).send('Must provide a drink.')
     } else {
-        namerollbar.critical('Drink already exists')
-        res.status(400).send('That student already exists')
+        rollbar.critical('Drink already exists')
+        res.status(400).send('That drink already exists')
     }
 })
 
