@@ -51,6 +51,7 @@ app.post('/api/drink', (req, res) => {
 
 app.get("/api/users", (req, res) => {
     let friends = ["Kent", "Niq", "Jeff", "Idris", "Lauren"];
+    rollbar.log('Friends added successfully', {authorz: 'Kent', type: 'manual entry'})
     res.status(200).send(friends);
   });
 
