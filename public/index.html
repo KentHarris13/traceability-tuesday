@@ -17,7 +17,7 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    
+
     <h1>Soda/Energy Drinks</h1>
     <form>
         <input type="text" placeholder="Type name here"/>
@@ -29,7 +29,7 @@
 
         document.getElementById("button").onclick = function () {
         axios
-          .get("http://localhost:4000/api/users")
+          .get("http://127.0.0.1:5500/public/index.html")
           .then(function (response) {
             const data = response.data;
             document.getElementById("people").innerHTML = data
